@@ -37,6 +37,15 @@ public class RegressionSuite extends Hooks {
         assertThat(actual, is(equalToIgnoringCase(expected)));
     }
 
+    @Test
+    public void checkoutBasket() {
+        helper.search("cable");
+        String expected = helper.selectAnyProduct();
+        helper.addProductToBasket();
+        String actual = helper.getProuctsInBasket();
+        assertThat(actual, is(equalToIgnoringCase(expected)));
+    }
+
     public void addProductToBasketUsingFilters(){
         helper.search("cable");
         helper.selectPrice();
