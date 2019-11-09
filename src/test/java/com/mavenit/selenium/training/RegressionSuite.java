@@ -55,4 +55,9 @@ public class RegressionSuite extends Hooks {
         assertThat(actual, is(equalToIgnoringCase(expected)));
 
     }
+    @Test
+    public void getTitle(){
+        helper.getPageTitle();
+        
+    }
 }
